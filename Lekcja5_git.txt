@@ -1,0 +1,36 @@
+#instalacja i sprawdzanie wersji pip
+#py -m pip install --upgrade pip
+#python -m pip --version
+#jak przejdziemy do katalogu gdzie jest pip to można tak
+#C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts>pip --version
+#C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts
+#C:\Users\User\AppData\Local\Programs\Python\Python311\Lib\site-packages\pip
+
+#komendy do cmd windows
+#dir, cd, mkdir, echo hi, echo hi > FileName.txt, type FileName.txt, del FileName.txt, ren #FileName.txt NewName.txt, copy File, rm dir /s /q
+
+#komendy na linux:
+#ls, cd, mkdir, echo hi, echo hi > FileName.txt, cat FileName.txt, rm FileName.txt, mv #FileName.txt NewName.txt, cp FileName.txt NewName.txt, rm
+
+#przy tworzeniu repozytorim zaznaczyć create readme zeby repo nie było puste
+
+#https://git-scm.com/download/win dla windows
+
+#klonowanie repozytorium
+#git clone https://github.com/no-logo/ITStep.git
+
+#dodawanie nowych plików z katalogu C:\Users\User\ITStep do lokalnego gita
+#git add .   wszystkie pliki
+#git add FileName.txt    wybrany plik
+
+#otwieranie projektu w git
+#code .
+
+#przesyłanie do repozytorium lokalnego
+#git commit -m "message: co dodaliśmy w tym commit"
+
+#przesyłanie do repozytorium na serwer
+#git push
+
+#uaktualnianie repozytorium lokalnego
+#git pull  
