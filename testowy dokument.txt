@@ -1,1 +1,2 @@
 nowy tekst w pliku tekstowym
+druga linnia w pliku
