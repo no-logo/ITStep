@@ -16,3 +16,19 @@ if __name__ == "__main__":
     print(rand_list)
     sorting.bublle_sort(rand_list)
     print(rand_list)
+
+    rand_list = generators.rand(20)
+    print(rand_list)
+    print(sorting.min(rand_list,0,len(rand_list)))
+
+    rand_list = generators.rand(20)
+    print(rand_list)
+    sorting.selection_sort(rand_list)
+    print(rand_list)
+
+    rand_list = generators.rand(20)
+    print(rand_list)
+    sorting.insertion_sort(rand_list)
+    print(rand_list)
+
+    # obczaić algorytmy sortowania https://visualgo.net/en/sorting
