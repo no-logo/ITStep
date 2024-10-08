@@ -34,3 +34,13 @@
 
 #uaktualnianie repozytorium lokalnego
 #git pull  
+
+sprawdzamy branch komendą
+git branch
+
+tworzymy branch komendą
+git branch dev
+
+zmiana branchu komendą
+git checkout dev
+

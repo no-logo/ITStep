@@ -1,4 +1,4 @@
-# ITStep zmiana w git
+# ITStep
 ## Header 2
 ### Headr 3
 
@@ -8,5 +8,6 @@ tekst
 
 **bold text**
 
+lista:
 - element 1
 - element 2
