@@ -26,3 +26,6 @@ d = {'a'  : 1, 'b' : 2, 'c' : 3}
 a1, *a = d
 print(a1)
 print(a)
+
+print(globals())
+print(globals()[a1])
