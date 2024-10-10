@@ -29,3 +29,13 @@ print(a)
 
 print(globals())
 print(globals()[a1])
+
+dict1 = {'a':1}
+print(dict1)
+
+dict1.setdefault('b',2)
+print(dict1)
+print(dict1.get('b'))       # rekomendowane uzywanie get
+print(dict1.get('c'))       # jeśli nie ma klucza w słowiniku zwraca None
+print(dict1.get('c',10))    # jeśli nie ma klucza zwróci wartość przekazaną w get
+                            # rekomendowane urzywanie get
