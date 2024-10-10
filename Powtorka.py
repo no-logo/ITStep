@@ -46,3 +46,6 @@ print(int(x))
 price = 59
 txt = f'The price is {price:.2f} dollars' # formatowanie ilości liczb po przecinku :.3f
 print(txt)
+
+# https://www.w3schools.com/python/default.asp fajne testy wszystkiego z pythone
+
