@@ -39,3 +39,6 @@ print(dict1.get('b'))       # rekomendowane uzywanie get
 print(dict1.get('c'))       # jeśli nie ma klucza w słowiniku zwraca None
 print(dict1.get('c',10))    # jeśli nie ma klucza zwróci wartość przekazaną w get
                             # rekomendowane urzywanie get
+
+x = 10.9
+print(int(x))
