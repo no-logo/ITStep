@@ -42,3 +42,7 @@ print(dict1.get('c',10))    # jeśli nie ma klucza zwróci wartość przekazaną
 
 x = 10.9
 print(int(x))
+
+price = 59
+txt = f'The price is {price:.2f} dollars' # formatowanie ilości liczb po przecinku :.3f
+print(txt)
