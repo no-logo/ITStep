@@ -42,4 +42,35 @@ class Circle:
 
 c = Circle(5)
 print(c.perimeter(), c.field()) 
+
+class Cube:
+    a = 0
+    def __init__(self, a) -> None:
+        self.a = a
+    def volume(self):
+        return self.a ** 3
+    
+class Calculator:
+    def __init__(self) -> None:
+        self.history = []
+
+    def add_to_history(self, operation, result):
+        self.history.append((operation, result))
+
+    def add(self, a, b):
+        result = a + b
+        self.add_to_history(f'add {a} {b}', result)
+        return result
+    
+    def substract(self, a, b):
+        return a - b
+    def multiply(self, a, b):
+        return a * b
+    def divide(self, a, b):
+        return a / b
+    
+calc = Calculator()
+print(calc.add(3, 6))
+print(calc.history)
+
     
