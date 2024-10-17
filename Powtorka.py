@@ -49,3 +49,6 @@ print(txt)
 
 # https://www.w3schools.com/python/default.asp fajne testy wszystkiego z pythone
 
+f = 1,2,3
+print(type(f), f)
+
