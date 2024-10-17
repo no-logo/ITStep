@@ -56,11 +56,11 @@ class Calculator:
 
     def add_to_history(self, operation, result):
         self.history.append((operation, result))
+        return result
 
     def add(self, a, b):
         result = a + b
-        self.add_to_history(f'add {a} {b}', result)
-        return result
+        return self.add_to_history(f'add {a} {b}', a + b)        
     
     def substract(self, a, b):
         return a - b
@@ -73,4 +73,25 @@ calc = Calculator()
 print(calc.add(3, 6))
 print(calc.history)
 
+
+class Person1:
+    def __init__(self, fname, lname) -> None:
+        self.first_name = fname
+        self.last_name = lname
+
+    def __str__(self) -> str:
+        return f'Imię: {self.first_name} Nazwisko: {self.last_name}'
+
+p = Person1('Jan', 'Nowak')
+print(p)
     
+class Student(Person1):
+    def __init__(self, fname, lname, school) -> None:
+        super().__init__(fname, lname)
+        self.school = school
+
+    def __str__(self) -> str:
+        return super().__str__() + f' school: {self.school}'
+
+s = Student('Piotr','Kowalski','II LO')
+print(s)
