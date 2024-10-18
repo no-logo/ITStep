@@ -151,7 +151,10 @@ def read_file(path):
     file = open(path, "r")
 
     try:
-        print(file.read())
+        nbr = 0
+        for line in file:
+            print(nbr, line)
+            nbr += 1
     except:
         print('error ocured')
     finally:
