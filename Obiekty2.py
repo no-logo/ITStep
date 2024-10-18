@@ -114,5 +114,47 @@ it = iter(r)
 
 for x in r:
     print(x)
+
+
+#wyjatki
+
+def get_num():
+    user_input = input('Podaj numer: ')
+    try:
+        num = int(user_input)        
+    except:
+        print('Invalid input')
+    else: 
+        print('real number')
+    finally:
+        print('to się zawsze wykona tu można np zamykac plik')
+    return num
+
         
+
+#print(get_num())
+#print(get_num())        
         
+def write_to_file(path, text):
+    file = open(path, 'a')
+
+    try:
+        file.write(text)
+    except:
+        print('faile to write into file')
+    finally:
+        file.close()
+
+write_to_file(r"C:\users\User\ITStep\file.py",'\ntekst do zapisania w pliku\n')
+
+def read_file(path):
+    file = open(path, "r")
+
+    try:
+        print(file.read())
+    except:
+        print('error ocured')
+    finally:
+        file.close()
+
+read_file(r"C:\users\User\ITStep\file.py")
