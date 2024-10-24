@@ -34,7 +34,8 @@ def usun_studenta():
     nr_indeksu = input('Podaj nr indeksu: ')
     if nr_indeksu in rejestr_studentow.keys():
         imie, nazwisko = rejestr_studentow[nr_indeksu]
-        rejestr_studentow.pop(nr_indeksu)
+        del rejestr_studentow[nr_indeksu] # del nie zaśmieca pamięci bo nie zwraca wartosci pop usuwa i zwraca wartosć
+        #rejestr_studentow.pop(nr_indeksu)
         print(f'Student {imie} {nazwisko} został usunięty.')
     else:
         print('Nie ma takiego nr indeksu w rejestrze')
