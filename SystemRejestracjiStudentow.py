@@ -40,30 +40,35 @@ def usun_studenta():
     else:
         print('Nie ma takiego nr indeksu w rejestrze')
 
+def main():
+    opcja = 0
 
-os.system('cls')
+    while opcja != 5:
+        print("""
+    1. Dodaj Studenta
+    2. Wyszukaj Studenta
+    3. Wyświetl wszystkich studentów
+    4. Usuń Studenta
+    5. Zakończ
+    """)
+        opcja = int(input('Wybierz opcję: '))
+        if opcja not in [1,2,3,4,5]:
+            print('brak takiej opcji')
+        if opcja == 1:
+            dodaj_studenta()
+        elif opcja == 2:
+            wyszukaj_studenta()
+        elif opcja == 3:
+            lista_studentow()
+        elif opcja == 4:
+            usun_studenta()
 
-opcja = 0
 
-while opcja != 5:
-    print("""
-1. Dodaj Studenta
-2. Wyszukaj Studenta
-3. Wyświetl wszystkich studentów
-4. Usuń Studenta
-5. Zakończ
-""")
-    opcja = int(input('Wybierz opcję: '))
-    if opcja not in [1,2,3,4,5]:
-        print('brak takiej opcji')
-    if opcja == 1:
-        dodaj_studenta()
-    elif opcja == 2:
-        wyszukaj_studenta()
-    elif opcja == 3:
-        lista_studentow()
-    elif opcja == 4:
-        usun_studenta()
+if __name__ == "__main__":
+    os.system('cls')
+    main()
+
+
 
 
 
