@@ -16,19 +16,20 @@ def dodaj_studenta():
 def wyszukaj_studenta():
     nr_indeksu = input('Podaj nr indeksu: ')
     if nr_indeksu in rejestr_studentow.keys():
-        print(f'{nr_indeksu} - {rejestr_studentow[nr_indeksu][0]} {rejestr_studentow[nr_indeksu][1]}')
+        imie, nazwisko = rejestr_studentow[nr_indeksu]
+        print(f'{nr_indeksu} - {imie} {nazwisko}')
     else:
         print('Nie ma takiego nr indeksu w rejestrze')
 
 def lista_studentow():
-    for k in rejestr_studentow.keys():
-        print(f'{k} - {rejestr_studentow[k][0]} {rejestr_studentow[k][1]}')
+    for k, v in rejestr_studentow.items():
+        print(f'{k} - {v[0]} {v[1]}')
+
 
 def usun_studenta():
     nr_indeksu = input('Podaj nr indeksu: ')
     if nr_indeksu in rejestr_studentow.keys():
-        imie = rejestr_studentow[nr_indeksu][0]
-        nazwisko = rejestr_studentow[nr_indeksu][1]
+        imie, nazwisko = rejestr_studentow[nr_indeksu]
         rejestr_studentow.pop(nr_indeksu)
         print(f'Student {imie} {nazwisko} został usunięty.')
     else:
