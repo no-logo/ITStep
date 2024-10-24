@@ -22,8 +22,12 @@ def wyszukaj_studenta():
         print('Nie ma takiego nr indeksu w rejestrze')
 
 def lista_studentow():
-    for k, v in rejestr_studentow.items():
-        print(f'{k} - {v[0]} {v[1]}')
+    if not rejestr_studentow:
+        print('Nie ma żadnych studentów w rejestrze.')
+    else:
+        print('Lista studentów')
+    for nr_indeksu, (imie, nazwisko) in rejestr_studentow.items():
+        print(f'{nr_indeksu} - {imie} {nazwisko}')
 
 
 def usun_studenta():
