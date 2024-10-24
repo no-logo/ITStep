@@ -24,3 +24,13 @@ import functools
 l6 = functools.reduce(lambda a, b: a + b, l5)
 
 print(l6)
+
+a = []
+for i in range(3):
+    a.append(lambda: i)
+
+print([f() for f in a])
+
+lst = [1,2,3,4,5]
+lst[2:4] = []
+print(lst)
