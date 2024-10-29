@@ -26,3 +26,9 @@ class Human():
 
 human = Human('Andrzej', 'Wawryk', '1975-01-03', '536956536', 'Kraków', 'Polska', 'Ulica 1/23 12-345 Kraków')
 print(human.get_first_name())
+print(human.get_last_name())
+print(human.get_date_of_birth())
+print(human.get_contact_number())
+print(human.get_city())
+print(human.get_country())
+print(human.get_address())
