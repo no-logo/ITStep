@@ -44,6 +44,28 @@ class Human():
     def set_address(self, address):
         self.__address = address
 
+class City:
+    def __init__(self, nazwa_miasta, nazwa_regionu, nazwa_kraju, liczba_mieszkancow, kod_pocztowy, nr_kierunkowy) -> None:
+        self.__nazwa_miasta = nazwa_miasta
+        self.__nazwa_regionu = nazwa_regionu
+        self.__nazwa_kraju = nazwa_kraju
+        self.__liczba_mieszkancow = liczba_mieszkancow
+        self.__kod_pocztowy = kod_pocztowy
+        self.__nr_kierunkowy = nr_kierunkowy
+
+    @classmethod
+    def create_class_from_input(cls):
+        nazwa_miasta = input('Podaj nazwe miasta: ')
+        nazwa_regionu = input('Podaj nazwe regionu: ')
+        nazwa_kraju = input('Podaj nazwe kraju: ')
+        liczba_mieszkancow = input('Podaj liczbe mieszkancow: ')
+        kod_pocztowy = input('Podaj kod pocztowy: ')
+        nr_kierunkowy = input('Podaj nr kierunkowy: ')
+        return (cls(nazwa_miasta, nazwa_regionu, nazwa_kraju, liczba_mieszkancow, kod_pocztowy, nr_kierunkowy))
+    
+    def get_city_info(self):
+        return self.__nazwa_miasta + ' ' + self.__nazwa_regionu + ' ' + self.__nazwa_kraju + ' ' + self.__liczba_mieszkancow
+
 
 if __name__ == "__main__":
 
@@ -73,3 +95,6 @@ if __name__ == "__main__":
     print(human.get_city())
     print(human.get_country())
     print(human.get_address())
+
+    city = City.create_class_from_input()
+    print(city.get_city_info())
