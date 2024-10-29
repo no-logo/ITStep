@@ -1,4 +1,10 @@
+
+
+#MATERIALY
+# https://materials.itstep.org/content/04c162fd-9837-49e1-8980-2fbceaf88bb8/pl
+
 class Human():
+
     def __init__(self,first_name, last_name, date_of_birth, contact_number, city, country, address) -> None:
         self.__first_name = first_name
         self.__last_name = last_name
@@ -39,29 +45,31 @@ class Human():
         self.__address = address
 
 
-human = Human('Andrzej', 'Wawryk', '1975-01-03', '536956536', 'Kraków', 'Polska', 'Ulica 1/23 12-345 Kraków')
+if __name__ == "__main__":
 
-print(human.get_first_name())
-print(human.get_last_name())
-print(human.get_date_of_birth())
-print(human.get_contact_number())
-print(human.get_city())
-print(human.get_country())
-print(human.get_address())
+    human = Human('Andrzej', 'Wawryk', '1975-01-03', '536956536', 'Kraków', 'Polska', 'Ulica 1/23 12-345 Kraków')
 
-human.set_first_name('aaa')
-human.set_last_name('bbb')
-human.set_date_of_birth('2005-05-10')
-human.set_contact_number('123456789')
-human.set_city('Wroclaw')
-human.set_country('POLSKA')
-human.set_address('aaabbb 123 12-123 Wroclaw')
+    print(human.get_first_name())
+    print(human.get_last_name())
+    print(human.get_date_of_birth())
+    print(human.get_contact_number())
+    print(human.get_city())
+    print(human.get_country())
+    print(human.get_address())
 
-print('')
-print(human.get_first_name())
-print(human.get_last_name())
-print(human.get_date_of_birth())
-print(human.get_contact_number())
-print(human.get_city())
-print(human.get_country())
-print(human.get_address())
+    human.set_first_name('aaa')
+    human.set_last_name('bbb')
+    human.set_date_of_birth('2005-05-10')
+    human.set_contact_number('123456789')
+    human.set_city('Wroclaw')
+    human.set_country('POLSKA')
+    human.set_address('aaabbb 123 12-123 Wroclaw')
+
+    print('')
+    print(human.get_first_name())
+    print(human.get_last_name())
+    print(human.get_date_of_birth())
+    print(human.get_contact_number())
+    print(human.get_city())
+    print(human.get_country())
+    print(human.get_address())
