@@ -47,7 +47,10 @@ class ColoredCircle(Circle, Colored):
             NotImplemented
     
     def __mul__(self, n):
-        self.radius = round(self.radius * n, 2)
+        if isinstance(n, int) or isinstance(n, float):
+            self.radius = round(self.radius * n, 2)
+        else:
+            NotImplemented
 
     def __eq__(self, other):
         if isinstance(other, ColoredCircle):
