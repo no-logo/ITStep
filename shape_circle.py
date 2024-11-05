@@ -36,18 +36,24 @@ class ColoredCircle(Circle, Colored):
         return f'Colored Circle of color {self.color}, radius {self.radius}'
     
     def __add__(self, other):
-        new_radius = self.radius + other.radius
-        if self.color == other.color:
-            new_color = self.color
+        if isinstance(other, ColoredCircle):
+            new_radius = self.radius + other.radius
+            if self.color == other.color:
+                new_color = self.color
+            else:
+                new_color = 'mixed'
+            return ColoredCircle(new_radius, new_color)
         else:
-            new_color = 'mixed'
-        return ColoredCircle(new_radius, new_color)
+            NotImplemented
     
     def __mul__(self, n):
         self.radius = round(self.radius * n, 2)
 
     def __eq__(self, other):
-        return self.radius == other.radius and self.color == other.color
+        if isinstance(other, ColoredCircle):
+            return self.radius == other.radius and self.color == other.color
+        else:
+            NotImplemented
     
 cc1 = ColoredCircle(10, 'red')
 cc2 = ColoredCircle(10, 'red')
