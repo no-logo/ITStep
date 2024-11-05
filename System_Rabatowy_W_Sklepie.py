@@ -1,6 +1,5 @@
 def stworz_rabat(rabat):
     def cena_po_rabacie(cena):
-        nonlocal rabat
         return cena - (cena * rabat / 100)
     return cena_po_rabacie
 
