@@ -6,7 +6,7 @@ def fun_wait():
 def miernik_wykonania(f):
     licznik = 0
     def zmierz_czas():
-        nonlocal licznik
+        nonlocal licznik 
         licznik += 1
         t = time.time()
         f()
