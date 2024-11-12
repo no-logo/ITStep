@@ -31,5 +31,5 @@ def count_calls(fun, l):
 cc = count_calls(fun_test, 0)
 
 cc()
-cc(0)
+cc()
 
