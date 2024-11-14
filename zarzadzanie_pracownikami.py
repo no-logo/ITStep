@@ -30,6 +30,8 @@ class Employee:
 
     def __init__(self, employee_name, employee_age, employee_salary) -> None:
         self.name = employee_name
+        #self.age = AgeDescriptor() tak też działa
+        #self.salary = SalaryDescriptor() tak też działa
         self.age = employee_age
         self.salary = employee_salary
 
