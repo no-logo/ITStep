@@ -1,7 +1,8 @@
 class ReadOnlyDescriptor:
+    "to jest deskryptor tylko do odczytu"
     def __init__(self) -> None:
         self._value = 0
-        self.__doc__ = "to jest deskryptor tylko do odczytu"
+
 
     def __get__(self, instance, owner):
         print("odczytuje wartosc")
@@ -34,4 +35,4 @@ class MyClass2:
 
 obj2 = MyClass2(6)
 print(obj2.read_only2)
-print(MyClass2.read_only2)
+print(ReadOnlyDescriptor.__doc__)
