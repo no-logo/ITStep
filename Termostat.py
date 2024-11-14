@@ -5,6 +5,7 @@ class Thermostat:
 
     @property
     def temperature(self):
+        """temperature between -30 and 50 degrees of Celcjush"""
         return self.__temperature
     
     @temperature.setter
@@ -13,6 +14,11 @@ class Thermostat:
             self.__temperature = t
         else:
             raise ValueError('temperatura not in scope')
+        
+    @temperature.deleter
+    def temperature(self):
+        del self.__temperature
+        print("Temperature has been deleted")
         
     @property
     def temperature_farenheit(self):
@@ -35,6 +41,12 @@ term.temperature = 10
 print(term.temperature)
 print(term.temperature_farenheit)
 print(term.temperature_kelvin)
-term.temperature_kelvin = 0
+term.temperature_kelvin = 300
 print(term.temperature_kelvin)
+print(term.temperature)
+
+print(Thermostat.temperature.__doc__)
+
+del term.temperature
+
 print(term.temperature)
