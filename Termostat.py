@@ -12,7 +12,7 @@ class Thermostat:
         if t >= - 30 and t <= 50:
             self.__temperature = t
         else:
-            raise ValueError('temperatura poza zakresem')
+            raise ValueError('temperatura not in scope')
         
     @property
     def temperature_farenheit(self):
@@ -32,4 +32,9 @@ class Thermostat:
 
 term = Thermostat(10)
 term.temperature = 10
+print(term.temperature)
+print(term.temperature_farenheit)
+print(term.temperature_kelvin)
+term.temperature_kelvin = 273.15
+print(term.temperature_kelvin)
 print(term.temperature)
