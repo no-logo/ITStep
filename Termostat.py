@@ -28,3 +28,8 @@ class Thermostat:
             self.__temperature = tk - 273.15
         else:
             raise ValueError('temperature must be int or float')
+
+
+term = Thermostat(10)
+term.temperature = 10
+print(term.temperature)
