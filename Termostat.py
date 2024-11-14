@@ -25,16 +25,16 @@ class Thermostat:
     @temperature_kelvin.setter
     def temperature_kelvin(self, tk):
         if isinstance(tk, float) or isinstance(tk, int):
-            self.__temperature = tk - 273.15
+            self.temperature = tk - 273.15
         else:
             raise ValueError('temperature must be int or float')
 
 
-term = Thermostat(10)
+term = Thermostat(20)
 term.temperature = 10
 print(term.temperature)
 print(term.temperature_farenheit)
 print(term.temperature_kelvin)
-term.temperature_kelvin = 273.15
+term.temperature_kelvin = 0
 print(term.temperature_kelvin)
 print(term.temperature)
