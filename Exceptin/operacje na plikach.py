@@ -36,3 +36,11 @@ with open('example.txt', 'r') as file:
     file.seek(3)
     print(f'odczytujemy pierwsy znak {file.read(1)}')
     print(f'aktualna pozycja wskaznika {file.tell()}')
+
+
+with open('example.txt', 'w') as file:
+    file.writelines(lines)
+
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())
