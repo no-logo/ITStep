@@ -58,7 +58,7 @@ class Flight:
         
 flight = Flight(123,10,0)
 print(flight.check_avalibility(123))
-flight.flight_reservation(123,3)
+flight.flight_reservation(123,11)
 print(flight.check_avalibility(123))
 flight.cancel_flight_reservations(123,2)
 print(flight.check_avalibility(123))
