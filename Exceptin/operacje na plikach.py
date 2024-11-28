@@ -44,3 +44,47 @@ with open('example.txt', 'w') as file:
 with open('example.txt', 'r') as file:
     for line in file:
         print(line.strip())
+
+
+with open('example.txt', 'a') as file:
+    file.write('nowa linie dopisana do pliku a w trybie append')
+
+
+with open('example.txt', 'r') as file:
+    content = file.read()
+
+print(content)
+
+with open('example.txt', 'r') as file:
+    while chunk := file.read(10):
+        print(chunk)
+
+    
+with open('example.txt', 'w') as file:
+    print('sprawdzanie konca pliku.\n')
+
+with open('example.txt', 'r') as file:
+    while True:
+        char = file.read(1)
+        if not char:
+            print('koniec pliku')
+            break
+
+data = b"to jest zapis binarny pliku 2"
+
+with open('example.bin', 'wb') as file:
+    file.write(data)
+
+with open('example.bin', 'rb') as file:
+    binary_content = file.read()
+
+print(binary_content)
+
+with open('example_truncate.txt', 'w' ) as file:
+    file.write('to jest długi plik123 do testowania trycate.')
+
+with open('example_truncate.txt', 'r+' ) as file:
+    file.truncate(20)
+
+with open('example_truncate.txt', 'r' ) as file:
+    print(file.read())
