@@ -1,0 +1,7 @@
+[2024-11-28 19:56:03.658166] 1 ustawienie nr lotu 123 ilosci miejsc 10 oraz rezerwacji 0
+[2024-11-28 19:56:03.659133] Only 10 places are available
+[2024-11-28 19:56:03.659133] 2 sprawdzenie ilosci dostepnych miejsc 10
+[2024-11-28 19:56:03.659133] 3 rezerwacja 11 miejsc None
+[2024-11-28 19:56:03.659133] 4 sprawdzenie ilosci dostepnych miejsc 10
+[2024-11-28 19:56:03.659133] 5 rezerwacja 2 miejsc None
+[2024-11-28 19:56:03.659133] 6 sprawdzenie ilosci dostepnych miejsc 8
