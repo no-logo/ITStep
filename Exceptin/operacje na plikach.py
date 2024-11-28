@@ -136,9 +136,12 @@ with open('new_file_json.json', 'r') as file:
 import zipfile
 
 with zipfile.ZipFile('file_zip.zip', 'w') as zipf:
-    zipf.write(new_file.csf)
-    zipf.write(newFile2.txt)
+    zipf.write(r'C:\Users\User\ITStep\new_file.csf')
+    zipf.write(r'C:\Users\User\ITStep\newFile.txt')
 
 with zipfile.ZipFile('file_zip.zip', 'r') as zipf:
     print(zipf.namelist())
-    #with zip
+    for file in zipf.namelist():
+        data = zipf.read(file)
+        print(data)
+
