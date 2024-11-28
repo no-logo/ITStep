@@ -88,3 +88,57 @@ with open('example_truncate.txt', 'r+' ) as file:
 
 with open('example_truncate.txt', 'r' ) as file:
     print(file.read())
+
+
+try:
+    with open('newFile.txt', 'x' ) as file:
+        file.write('ten plik zostanie utworzony tylko raz')
+except FileExistsError as e:
+    print(e)
+
+
+try:
+    with open('newFile2.txt', 'r' ) as file:
+        content = file.read()
+except FileNotFoundError as e:
+    print(f'plik nie istnieje: {e}')
+except PermissionError as e:
+    print(f'brak uprawnien: {e}')
+except Exception as e:
+    print(f'ogolny wyjatek: {e}')
+
+import csv
+
+with open('new_file.csf', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['imie', 'wiek'])
+    writer.writerow(['anna',25]) 
+    writer.writerow(['andrzej',50]) 
+
+with open('new_file.csf', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+
+import json
+
+data = {"imie" : "jan", "wiek" : 30}
+
+with open('new_file_json.json', 'w') as file:
+    json.dump(data, file)
+
+with open('new_file_json.json', 'r') as file:
+    content = json.load(file)
+    print(content)
+    print(type(content))
+    print(content["imie"])
+
+import zipfile
+
+with zipfile.ZipFile('file_zip.zip', 'w') as zipf:
+    zipf.write(new_file.csf)
+    zipf.write(newFile2.txt)
+
+with zipfile.ZipFile('file_zip.zip', 'r') as zipf:
+    print(zipf.namelist())
+    #with zip
