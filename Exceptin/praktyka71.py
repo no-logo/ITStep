@@ -70,6 +70,25 @@ with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad7.txt', 'w') as file:
     for line in lines:
         file.write(line+'\n')
 
+#zadanie 8
+print('zadanie 8 \n')
+lines = ['1111','2222','3333','4444']
+lines = reversed(lines)
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad8.txt', 'w') as file:
+    file.seek(0)
+    for line in lines:
+        file.write(line+'\n')
+
+#zadanie 9
+print('zadanie 9 \n')
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad8.txt', 'r') as file:
+    print(len(file.read()))
+
+#zadanie 10
+print('zadanie 10 \n')
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad8.txt', 'r') as file:
+    print(len(file.readlines()))
+
 
 
  
