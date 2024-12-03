@@ -18,11 +18,23 @@ with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r') as file:
             file3.write(line)
 
 #zadanie 4
+print('zadanie 4 \n')
 with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r+') as file:
-    for line in file.readlines():
-        print(line)
-        if line.find(',') >= 0:
-            print(file.tell())
+    lines = file.readlines()
+    print(lines)
+
+    j  = 0
+    for i in range(len(lines)):
+        if lines[i].find(',') < 0:
+            j = i  
+    print(j)
+    if j == 0:
+        j = i + 1         
+    lines.insert(j+1,'************\n')  
+    print(lines)     
+    file.seek(0)
+    file.writelines(lines)
+ 
       
             
 

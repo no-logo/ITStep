@@ -1,5 +1,4 @@
-Date and time are not data types in Python, however, a module called datetime can be imported to work with both the date and the time. There is no need to install the datetime module outside because it is built into Python. In Python, there are numerous ways to obtain the current date and time by utilizing built-in and third-party modules.
-Python Date and Time
-
-Python is a modern programming language that is adaptable, general-purpose, and high-level. It also has datetime and time modules for performing time-sensitive activities. The time value begins on January 1st, 1970, and most operating systems support it until 2038. Working with time is an important aspect of many applications. Assume you’re creating a sign-up form for a website. You might wish to get the current time so you know when a user joined your site. This is where the Python get current time module comes in handy. You can use the time module in your Python scripts to work with time.
-Python Get Current Time
+linia 5,6linia 34
+linia 3
+linia 1,2
+linia 1
