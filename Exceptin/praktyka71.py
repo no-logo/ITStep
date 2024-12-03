@@ -34,6 +34,21 @@ with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r+') as file:
     print(lines)     
     file.seek(0)
     file.writelines(lines)
+
+#zadanie 5
+print('zadanie 5 \n')
+znak = input('podaj znak: ')
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r') as file:
+    content = file.read().replace('\n',' ')
+    words = content.split()
+    i = 0
+    print(words)
+    for w in words:
+        if w.startswith(znak):
+            i += 1
+    
+    print(f'plik zawiera {i} słów zaczynających sie na znak {znak}')
+
  
       
             
