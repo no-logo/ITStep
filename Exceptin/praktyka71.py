@@ -49,6 +49,21 @@ with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r') as file:
     
     print(f'plik zawiera {i} słów zaczynających sie na znak {znak}')
 
+#zadanie 6
+print('zadanie 6 \n')
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r') as file:
+    with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad6.txt', 'w') as file1:
+        for line in file.readlines():
+            for char in line:
+                if char == '*':
+                    file1.write('&')
+                elif char == '&':
+                    file1.write('*')
+                else:
+                    file1.write(char)
+
+
+
  
       
             
