@@ -62,6 +62,14 @@ with open(r'C:\Users\User\ITStep\Exceptin\praktyka71.txt', 'r') as file:
                 else:
                     file1.write(char)
 
+#zadanie 7
+print('zadanie 7 \n')
+lines = ['1111','2222','3333','4444']
+with open(r'C:\Users\User\ITStep\Exceptin\praktyka71_zad7.txt', 'w') as file:
+    file.seek(0)
+    for line in lines:
+        file.write(line+'\n')
+
 
 
  
