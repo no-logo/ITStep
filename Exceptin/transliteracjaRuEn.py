@@ -28,3 +28,9 @@ for k,v in translit_map_en_to_ru.items():
     ru_txt = ru_txt.replace(k,v)
 
 print(ru_txt)
+eng_txt = ru_txt
+
+for k, v in translit_map_ru_to_en.items():
+    eng_txt = eng_txt.replace(k,v)
+
+print(eng_txt)
