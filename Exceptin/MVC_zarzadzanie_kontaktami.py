@@ -7,16 +7,20 @@ class ContactsModel:
         self.contacts.append({"ID":id, "first_name":first_name, "last_name":last_name, "phone_number":phone_number})
 
     def remove_contact(self, id):
+        j = -1
         for i in range(len(self.contacts)):
             if self.contacts[i]["ID"] == id:
-                print(i)
-                self.contacts.pop(i)
+                j = i
+        if j >= 0:
+            self.contacts.pop(j)
+
 class ContactsView:
     
     @staticmethod
     def view_cotntacts(contacts):
         for d in contacts:
             print(d)
+        print('\n')
 
 class ContactsController:
     def __init__(self, model, view):
@@ -41,8 +45,8 @@ if __name__ == "__main__":
 
     controller.view_contacts()
     controller.add_contact('Andrzej', 'Wawryk', 1234566)
-    #controller.view_contacts()
+    controller.view_contacts()
     controller.add_contact('Maciek', 'Wawryk', 789456)
     controller.view_contacts()
     controller.remove_contact(1)
-    #controller.view_contacts()
+    controller.view_contacts()
